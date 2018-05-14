@@ -98,6 +98,26 @@ button {
   margin-top: -10px;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: left;
+/*  padding-top: 100px;*/
+}
+
+.footer-padding {
+  padding-bottom: 200px;
+}
+
+.footer ul {
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
 /* unvisited link */
 a:link {
   color: #062F4F;

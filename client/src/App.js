@@ -174,11 +174,22 @@ class App extends Component {
     return this.state.categories[index];
   }
 
+  getQuote(url) {
+    const API = `http://quotes.rest/qod.json?category=inspire`
+    fetch(API)
+    .then((data) => data.json())
+    .then(function(data) {
+      console.log(data.contents.quotes[0].quote)
+     return data.contents.quotes[0].quote
+      })
+    }
+
   componentDidMount() {
     this.fetchProducts();
     this.fetchCategories();
     this.updateCart();
     this.fetchRecommended();
+    this.getQuote();
   }
 
   render() {
